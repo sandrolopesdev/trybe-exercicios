@@ -43,3 +43,20 @@ const compare = () => {
   }
 }
 compare(); //Invoca função
+
+//Exercício 4:
+// Variáveis que armazenam os valores dos lados de um triângulo
+const ladoA = 18;
+const ladoB = 60;
+const ladoC = 60;
+
+//Função para verificar os ângulos de cada lado
+const triangulo = () => {
+  //Estrutura condicional que verifica se os lados são equivalentes
+  if (ladoA === 60 && ladoB === 60 && ladoC === 60) {
+    console.log("O conjunto de valores atribuídos às variáveis correspondem aos ângulos de um triángulo equilátero.");
+  } else { //Qualquer valor que não seja equivalente ao grau de um dos lados do triângulo equilátero
+    console.log("Os valores não correspondem aos ângulos de um triângulo equilátero!");
+  }
+}
+triangulo(); //Invoca função
