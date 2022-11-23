@@ -126,3 +126,6 @@ const whoIsEven = (a, b, c) => {
 }
 whoIsEven(3, 3, 3); //Invoca função
 console.log(isEven);
+
+//Exercício 8:
+//
