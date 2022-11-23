@@ -87,3 +87,28 @@ const checkMoviment = (piece) => {
   }
 }
 checkMoviment('TORRE'); //Invoca a função e atribuiu um determina um parâmetro que será analisado dentro do switch
+
+//Exercício 6:
+//Variável que armazena a nota do aluno
+const percentage = 49;
+let note; //Variável que recebe a nota nota de acordo com o patamar
+
+const finalNote = () => { //A cada patamar atingido a lógica dentro a arrow function reatribiu um novo valor a variável note
+  if (percentage < 0 || percentage > 100) {
+    note = 'Erro, insira um valor válido!';
+  } else if (percentage >= 90) {
+    note = 'A';
+  } else if (percentage >= 80 && percentage < 90) {
+    note = 'B';
+  } else if (percentage >= 70 && percentage < 80) {
+    note = 'C';
+  } else if (percentage >= 60 && percentage < 70) {
+    note = 'D';
+  } else if (percentage >= 50 && percentage < 60) {
+    note = 'E';
+  } else {
+    note = 'F';
+  }
+}
+finalNote();
+console.log(note);
