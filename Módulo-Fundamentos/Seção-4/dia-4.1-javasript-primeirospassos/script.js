@@ -27,3 +27,19 @@ if (a > b && a > c) {
 } else {
   console.log(`Os valores são iguais`); //Utilização de template literals
 }
+
+//Exercício 3:
+//Variáveis que armazenam os valores positivos e negativos a serem comparados
+const a = 1.4;
+
+//Utilizada arrow function para adequação aos padrões atuais
+const compare = () => {
+  if (a > 0) {  //Verifica se o valor da variável é maior que 0, caso retorne true é executado o bloco "Positive"
+    console.log("Positive");
+  } else if (a < 0) { //Verifica se o valor é menor do que 0, caso retorne trune é executado o bloco "Negative"
+    console.log("Negative");
+  } else { //Lógica que onde qualquer número que não seja positivo ou negativo execute o bloco "Zero"
+    console.log("Zero");
+  }
+}
+compare(); //Invoca função
