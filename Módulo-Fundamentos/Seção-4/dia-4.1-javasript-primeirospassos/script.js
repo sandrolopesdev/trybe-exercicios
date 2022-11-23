@@ -60,3 +60,30 @@ const triangulo = () => {
   }
 }
 triangulo(); //Invoca função
+
+//Exercício 5:
+//Variável que armazenará uma arrow function onde é executado um bloco switch/case
+const checkMoviment = (piece) => {
+  switch (piece.toLowerCase()) { //toLowerCase é o responsável por fazer a função reconhecer a string escrita de forma maiúscula
+    case 'peão': //Cria o caso e retorna true caso a 
+      console.log("Os peões se movem somente para frente, uma casa por vez, uma exceção é a primeira vez que um peão é movido, quando ele pode se mover duas casas.");
+      break; //Interrompe a execução do bloco de código quando o case retorna true
+    case 'bispo':
+      console.log("O bispo se move em uma linha reta diagonalmente no tabuleiro. Ele pode mover-se por tantas casas quantas quiser, até encontrar o final do tabuleiro ou outra peça.");
+      break;
+    case 'torre':
+      console.log("A torre se move em linha reta horizontalmente e verticalmente pelo número de casas não ocupadas, até atingir o final do tabuleiro ou ser bloqueado por outra peça.");
+      break;
+    case 'cavalo':
+      console.log("O cavalo é a única peça do tabuleiro que pode pular sobre outras peças. O cavalo move-se por duas casas horizontalmente ou verticalmente e então uma casa a mais em uma ângulo reto. O movimento do cavalo forma um “L”.");
+      break;
+    case 'rainha':
+      console.log("A rainha é considerada a peça mais poderosa do tabuleiro. Ela pode mover-se qualquer número de casas em linha reta - verticalmente, horizontalmente ou diagonalmente.");
+      break;
+    case 'rei':
+      console.log("O rei pode se mover para qualquer casa adjacente. Assim, ele pode mover-se uma casa em qualquer direção: horizontalmente, verticalmente ou diagonalmente.");
+    default:
+      console.log("Peça inválida, por favor verificar a peça desejada.");
+  }
+}
+checkMoviment('TORRE'); //Invoca a função e atribuiu um determina um parâmetro que será analisado dentro do switch
