@@ -120,7 +120,7 @@ let isEven;
 const whoIsEven = (a, b, c) => {
   if (a % 2 === 0 || b % 2 === 0 || c % 2 === 0) { //Caso somente um dos valores retorne true isEven será sobrescrito com true
     isEven = true;
-  } else { //Caso todos os parâmetros retornem false, inEven será sobrescrito com false
+  } else { //Caso todos os parâmetros retornem false, isEven será sobrescrito com false
     isEven = false;
   }
 }
@@ -128,4 +128,17 @@ whoIsEven(3, 3, 3); //Invoca função
 console.log(isEven);
 
 //Exercício 8:
+//Variável que será sobrescrita com true ou false a depender do retorno do bloco if
+let isOdd;
+
+const whoIsOdd = (a, b, c) => {
+  if (a % 2 !== 0 || b % 2 !== 0 || c % 2 !== 0) { //Caso somente um dos valores retorne true isOdd será sobrescrito com true
+    isOdd = true;
+  } else { //Caso todos os parâmetros retornem false, isOdd será sobrescrito com false
+    isOdd = false;
+  }
+}
+whoIsOdd(4, 4, 4); //Invoca função
+console.log(isOdd);
+
 //
