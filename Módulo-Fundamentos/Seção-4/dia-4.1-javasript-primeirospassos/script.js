@@ -141,4 +141,15 @@ const whoIsOdd = (a, b, c) => {
 whoIsOdd(4, 4, 4); //Invoca função
 console.log(isOdd);
 
-//
+//Exercício 9:
+//Variáveis que receberam valores de custos
+const productValue = 100; //Custo de compra do produto
+const resaleValue = 145; //Valor de revenda do produto
+const tax = 20; //Impostos
+let finalValue;
+
+const profitValue = () => { //Função que retorna a subtração do valor de revenda pelo valor do preço de compra e impostos
+  finalValue = (resaleValue - productValue) - (tax * resaleValue) / 100;
+}
+profitValue(); //Invoca função
+console.log(`O valor de lucro líquido após diluir o valor de compra e impostos é ${finalValue} reais`);
