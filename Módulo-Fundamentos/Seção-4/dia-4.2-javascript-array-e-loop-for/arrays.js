@@ -1,57 +1,55 @@
-// Criando um laço de repetição.
+// Percorra o array imprimindo todos os valores nele contidos com a função console.log();
+const numbers1 = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
-// Crie um laço de repetiçao do array abaixo:
-
-let pizzas = ['Frango com Catupiry', 'Palmito', 'Calabreza', 'Atum'];
-
-for (let index = 0; index < pizzas.length; index += 1) {
-    console.log(pizzas[index]);
+const arr1 = () => {
+  for (let index = 0; index < numbers.length; index += 1) {
+    console.log(numbers[index]); //Estrutura que itera e imprime os valores do array
+  }
 }
+arr1();
 
-// Adicione um item na última posição do array:
+// Some todos os valores contidos no array e imprima o resultado;
+const numbers2 = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let sum = 0;
 
-pizzas.push('Margerita');
-console.log(pizzas);
+const arr2 = () => {
+  for (let index = 0; index < numbers2.length; index += 1) {
+    sum += numbers2[index]; //Bloco de código responsável por realizar a operação aritimética
+  }
+}
+arr2();
+console.log(sum);
 
-// Adicione um item na primeira posição do array:
+// Calcule e imprima a média aritmética dos valores contidos no array;
 
-pizzas.unshift('Queijo');
-console.log(pizzas);
+// A média aritmética é o resultado da soma de todos os elementos dividido pelo número total de elementos.
+const numbers3 = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let sum = 0;
 
-// Remova a última posição do array:
+const arr3 = () => {
+  for (let index = 0; index < numbers3.length; index += 1) {
+    sum += numbers3[index];
+  }
+}
+arr3();
+let result = sum / numbers3.length;
+console.log(result);
 
-pizzas.pop();
-console.log(pizzas);
+// Com base no código que acabou de gerar, faça com que, caso o valor final seja maior que 20, imprima a 
+// mensagem: “valor maior que 20”. Caso não seja, imprima a mensagem: “valor menor ou igual a 20”;
+const numbers3 = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let sum = 0;
+let result = 0;
 
-// Remova a primeira posição do array:
-
-pizzas.shift();
-console.log(pizzas);
-
-// Descubra qual o índice de "Palmito" no array:
-
-let index = pizzas.indexOf('Palmito');
-console.log(index);
-
-// PARA FIXAR;
-
-/// Obtenha o valor “Serviços” do array menu:
-
-let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
-let menuServices = menu[1];
-
-console.log(menuServices);
-
-/// Procure o índice do valor “Portfólio” do array menu:
-
-let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
-let indexOf = menu.indexOf('Portfólio');
-
-console.log(indexOf);
-
-/// Adicione o valor “Contato” no final do array menu:
-
-let menu = ['Home', 'Serviços', 'Portfólio', 'Links'];
-menu.push('Contato');
-
-console.log(menu);
+const arr3 = () => {
+  for (let index = 0; index < numbers3.length; index += 1) {
+    result = (sum += numbers3[index] / numbers3.length).toFixed(2);
+  }
+  if (result > 20) {
+    console.log("Valor maior que 20");
+  } else {
+    console.log("Valor menor ou igual a 20");
+  }
+}
+arr3();
+console.log(result);
