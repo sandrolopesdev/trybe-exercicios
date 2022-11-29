@@ -153,3 +153,41 @@ const profitValue = () => { //Função que retorna a subtração do valor de rev
 }
 profitValue(); //Invoca função
 console.log(`O valor de lucro líquido após diluir o valor de compra e impostos é ${finalValue} reais`);
+
+//Exercício 10:
+const baseSalaryInss = [1556.94, 2594.92, 5189.82]; //Valores base das alícotas de contrinuição previdenciaria
+const baseSalaryIr = [1903.98, 2826.65, 3751.05, 4664.68]; //valores base das alícotas de imposto de rendas
+let liquidInss;
+let liquidIr;
+let liquidSalary;
+
+const netSalary = (salary) => {
+  if (salary <= baseSalaryInss[0] || salary <= baseSalaryIr[0]) {
+    liquidInss = (salary * 8) / 100;
+    liquidIr = 0;
+    liquidSalary = salary - liquidInss;
+  } else if (salary > baseSalaryInss[0] && salary <= baseSalaryInss[1] || salary > baseSalaryIr[0] && salary <= baseSalaryIr[1]) {
+    liquidInss = (salary * 9) / 100;
+    liquidIr = (liquidInss * 7.5) / 100;
+    liquidSalary = (`Salário líquido: R$${(salary - liquidInss - liquidIr).toFixed(2)}`);
+  } else if (salary > baseSalaryInss[1] && salary <= baseSalaryInss[2] || salary > baseSalaryIr[1] && salary <= baseSalaryInss[2]) {
+    liquidInss = (salary * 11) / 100;
+    liquidIr = (liquidInss * 15) / 100;
+    liquidSalary = (`Salário líquido: R$${(salary - liquidInss - liquidIr).toFixed(2)}`);
+  } else if (salary > baseSalaryInss[2] || salary > baseSalaryIr[2] && salary <= baseSalaryIr[3]) {
+    liquidInss = 570.88
+    liquidIr = (salary * 22.5) / 100;
+    liquidSalary = (`Salário líquido: R$${(salary - liquidInss - liquidIr).toFixed(2)}`);
+  } else if (salary > baseSalaryIr[3]) {
+    liquidInss = 570.88
+    liquidIr = (salary * 27.5) / 100;
+    liquidSalary = (`Salário líquido: R$${(salary - liquidInss - liquidIr).toFixed(2)}`);
+  } else {
+    liquidInss = "Valores não especificados para tributação";
+    liquidIr = "Valores não especificados para tributação";
+  }
+}
+netSalary(7500);
+// console.log(aliquotInss);
+// console.log(aliquotIr);
+console.log(liquidSalary);
