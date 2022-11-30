@@ -6,30 +6,25 @@
 // Divisão (a / b)
 // Módulo (a % b)
 
-
 const addition = (a, b) => {
   return a + b;
 };
 console.log(addition(28, 10));
-
 
 const subtraction = (a, b) => {
   return a - b;
 }
 console.log(subtraction(28, 10));
 
-
 const multiplication = (a, b) => {
   return a * b;
 }
 console.log(multiplication(28, 10));
 
-
 const division = (a, b) => {
   return a / b;
 }
 console.log(division(28, 10));
-
 
 const mod = (a, b) => {
   return a % b;
@@ -90,5 +85,24 @@ const triangle = (leftAngle, rightAngle, base) => {
   } else {
     console.log(`Error!`);
   }
-}
+};
 triangle(60, -14, 60);
+
+//Usando o objeto abaixo, faça os exercícios a seguir:
+
+let info = {
+  personagem: 'Margarida',
+  origem: 'Pato Donald',
+  nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
+};
+
+// Imprima no console uma mensagem de boas-vindas para a personagem acima, incluindo seu nome. Use a sintaxe meuObjeto.chave. Valor esperado no console: Bem-vinda, Margarida
+
+console.log(`Bem-vinda, ${info.personagem}`);
+
+// Insira no objeto uma nova propriedade com o nome de chave ‘recorrente’ e o valor ‘Sim’ e, em seguida, imprima o objeto no console. Use a sintaxe meuObjeto['chave'] = valor. Valor esperado no console:
+
+info.recorrente = 'Sim';
+console.log(info);
+
+// Faça um for/in que mostre todas as chaves do objeto. Valor esperado no console:
